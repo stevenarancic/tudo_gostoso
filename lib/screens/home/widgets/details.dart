@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tudo_gostoso/style.dart';
 
 class Details extends StatelessWidget {
@@ -9,6 +10,44 @@ class Details extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         vertical: 10,
         horizontal: 20,
+      ),
+      child: Column(
+        children: [
+          Text(
+            "Bolo Gelado",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 34,
+            ),
+          ),
+          Row(
+            children: [
+              Column(
+                children: [
+                  FaIcon(
+                    FontAwesomeIcons.solidClock,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    "PREPARO",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "40 MIN",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ],
       ),
     );
   }
