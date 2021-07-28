@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tudo_gostoso/models/recipe.dart';
 import 'package:tudo_gostoso/style.dart';
 
 class Details extends StatelessWidget {
+  final Recipe _recipeObj;
+
+  Details(this._recipeObj);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,128 +19,131 @@ class Details extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "Bolo Gelado",
+            _recipeObj.name,
             style: TextStyle(
               color: Colors.white,
               fontSize: 34,
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                children: [
-                  FaIcon(
-                    FontAwesomeIcons.solidClock,
-                    color: Colors.white,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 3,
+          Container(
+            margin: EdgeInsets.only(top: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    FaIcon(
+                      FontAwesomeIcons.solidClock,
+                      color: Colors.white,
                     ),
-                    child: Text(
-                      "PREPARO",
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 3,
+                      ),
+                      child: Text(
+                        "PREPARO",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "${_recipeObj.preparationTime} MIN",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 12,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
-                  Text(
-                    "40 MIN",
-                    style: TextStyle(
+                  ],
+                ),
+                Column(
+                  children: [
+                    FaIcon(
+                      FontAwesomeIcons.cheese,
                       color: Colors.white,
-                      fontSize: 12,
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  FaIcon(
-                    FontAwesomeIcons.cheese,
-                    color: Colors.white,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 3,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 3,
+                      ),
+                      child: Text(
+                        "RENDIMENTO",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
-                    child: Text(
-                      "RENDIMENTO",
+                    Text(
+                      "${_recipeObj.yield} PORÇÕES",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 12,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
-                  Text(
-                    "12 PORÇÕES",
-                    style: TextStyle(
+                  ],
+                ),
+                Column(
+                  children: [
+                    FaIcon(
+                      FontAwesomeIcons.solidHeart,
                       color: Colors.white,
-                      fontSize: 12,
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  FaIcon(
-                    FontAwesomeIcons.solidHeart,
-                    color: Colors.white,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 3,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 3,
+                      ),
+                      child: Text(
+                        "FAVORITOS",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
-                    child: Text(
-                      "FAVORITOS",
+                    Text(
+                      "${_recipeObj.numberOfFavorites}",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 12,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
-                  Text(
-                    "312362",
-                    style: TextStyle(
+                  ],
+                ),
+                Column(
+                  children: [
+                    FaIcon(
+                      FontAwesomeIcons.solidCommentAlt,
                       color: Colors.white,
-                      fontSize: 12,
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  FaIcon(
-                    FontAwesomeIcons.solidCommentAlt,
-                    color: Colors.white,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 3,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 3,
+                      ),
+                      child: Text(
+                        "COMENTÁRIOS",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
-                    child: Text(
-                      "COMENTÁRIOS",
+                    Text(
+                      "${_recipeObj.numberOfComments}",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 12,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ),
-                  Text(
-                    "6847",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                    ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
