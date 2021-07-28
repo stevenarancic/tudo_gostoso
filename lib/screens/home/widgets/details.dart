@@ -28,12 +28,17 @@ class Details extends StatelessWidget {
                     FontAwesomeIcons.solidClock,
                     color: Colors.white,
                   ),
-                  Text(
-                    "PREPARO",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 3,
+                    ),
+                    child: Text(
+                      "PREPARO",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   Text(
@@ -44,7 +49,91 @@ class Details extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
+              Column(
+                children: [
+                  FaIcon(
+                    FontAwesomeIcons.cheese,
+                    color: Colors.white,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 3,
+                    ),
+                    child: Text(
+                      "RENDIMENTO",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    "12 PORÇÕES",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  FaIcon(
+                    FontAwesomeIcons.solidHeart,
+                    color: Colors.white,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 3,
+                    ),
+                    child: Text(
+                      "FAVORITOS",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    "312362",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  FaIcon(
+                    FontAwesomeIcons.solidCommentAlt,
+                    color: Colors.white,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 3,
+                    ),
+                    child: Text(
+                      "COMENTÁRIOS",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    "6847",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ],
