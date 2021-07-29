@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tudo_gostoso/models/recipe.dart';
 import 'package:tudo_gostoso/screens/home/widgets/details.dart';
+import 'package:tudo_gostoso/screens/home/widgets/list_elements.dart';
 import 'package:tudo_gostoso/screens/home/widgets/my_title.dart';
 import 'package:tudo_gostoso/style.dart';
 
@@ -60,6 +61,10 @@ class Home extends StatelessWidget {
             MyTitle(
               icon: FontAwesomeIcons.bookOpen,
               title: "ingredientes",
+            ),
+            ListElements(
+              title: "Ingredientes",
+              listOfElements: recipe.ingredientsPaste,
             ),
             MyTitle(
               icon: FontAwesomeIcons.utensilSpoon,
