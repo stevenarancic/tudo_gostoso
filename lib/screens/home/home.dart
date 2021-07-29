@@ -63,12 +63,24 @@ class Home extends StatelessWidget {
               title: "ingredientes",
             ),
             ListElements(
-              title: "Ingredientes",
+              title: "Massa",
               listOfElements: recipe.ingredientsPaste,
+            ),
+            ListElements(
+              title: "Cobertura",
+              listOfElements: recipe.ingredientsTopping,
             ),
             MyTitle(
               icon: FontAwesomeIcons.utensilSpoon,
               title: "modo de preparo",
+            ),
+            ListElements(
+              title: "Massa",
+              listOfElements: recipe.preparationModePaste,
+            ),
+            ListElements(
+              title: "Cobertura",
+              listOfElements: recipe.preparationModeTopping,
             ),
           ],
         ),

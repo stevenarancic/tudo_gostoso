@@ -11,15 +11,29 @@ class ListElements extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          title,
-        ),
-        Column(
-          children: buildList(listOfElements),
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+      child: Column(
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: buildList(listOfElements),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -29,8 +43,11 @@ class ListElements extends StatelessWidget {
     List<Widget> listOfWidgets = [];
     itens.forEach((element) {
       listOfWidgets.add(
-        Text(
-          element,
+        Padding(
+          padding: const EdgeInsets.only(bottom: 8),
+          child: Text(
+            element,
+          ),
         ),
       );
     });
