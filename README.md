@@ -1,2 +1,2 @@
 # tudo_gostoso
- Projeto do app Tudo Gostoso feito em Flutter.
+ Layout de página de uma comida do app Tudo Gostoso feito em Flutter.
